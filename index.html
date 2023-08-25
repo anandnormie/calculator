@@ -1,54 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mycalculator_using_htmlcss&js</title>
-    <link rel="stylesheet" href="calc.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator</title>
+<link rel="stylesheet" href="calc.css">
 </head>
-
 <body>
-    <div class="contents">
-        <h1 id="topic">MyCalculator</h1>
-        <div class="calculator">
-            <input type="text" name="screen" id="screen">
-            <table>
-                <tr>
-                    <td><button>C</button></td>
-                    <td><button>%</button></td>
-                    <td><button>del</button></td>
-                    <td><button>/</button></td>
-                </tr>
-                <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button>*</button></td>
-                </tr>
-                <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button>-</button></td>
-                </tr>
-                <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td><button>+</button></td>
-                </tr>
-                <tr>
-                    <td><button>00</button></td>
-                    <td><button>0</button></td>
-                    <td><button>.</button></td>
-                    <td><button>=</button></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</body>
+<div class="calculator">
+  <input type="text" id="output" readonly>
+  <div class="keypad">
+    <button class="btn" onclick="clearOutput()">C</button>
+    <button class="btn" onclick="appendToOutput('7')">7</button>
+    <button class="btn" onclick="appendToOutput('8')">8</button>
+    <button class="btn" onclick="appendToOutput('9')">9</button>
+    <button class="btn" onclick="appendToOutput('/')">/</button>
+    <button class="btn" onclick="appendToOutput('4')">4</button>
+    <button class="btn" onclick="appendToOutput('5')">5</button>
+    <button class="btn" onclick="appendToOutput('6')">6</button>
+    <button class="btn" onclick="appendToOutput('*')">x</button>
+    <button class="btn" onclick="appendToOutput('1')">1</button>
+    <button class="btn" onclick="appendToOutput('2')">2</button>
+    <button class="btn" onclick="appendToOutput('3')">3</button>
+    <button class="btn" onclick="appendToOutput('-')">-</button>
+    <button class="btn" onclick="appendToOutput('0')">0</button>
+    <button class="btn" onclick="appendToOutput('.')">.</button>
+    <button class="btn" onclick="calculate()">=</button>
+    <button class="btn" onclick="appendToOutput('+')">+</button>
+    <button class="btn" onclick="calculateSquareRoot()">√</button>
+    <button class="btn" onclick="calculateExponent()">x^2</button>
+  </div>
+</div>
 <script src="calc.js"></script>
-
+</body>
 </html>
